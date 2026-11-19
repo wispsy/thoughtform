@@ -1,7 +1,7 @@
 [project]
 name = "thoughtform"
 version = "0.1.0"
-description = "Add your description here"
+description = "Individual model definitions and model-neutral agency."
 readme = "README.md"
 authors = [
     { name = "ellainng", email = "299958882+ellainng@users.noreply.github.com" }
@@ -15,3 +15,13 @@ thoughtform = "thoughtform:main"
 [build-system]
 requires = ["uv_build>=0.13.6,<0.14.0"]
 build-backend = "uv_build"
+
+[project.optional-dependencies]
+thoughtformula = ["thoughtformula @ git+https://github.com/wispsy/thoughtformula.git@d61dca801b4adb3addf8f72282d87281ca091f19"]
+
+[project.urls]
+Source = "https://github.com/wispsy/thoughtform"
+Project = "https://github.com/orgs/wispsy/projects/28"
+
+[tool.uv.build-backend]
+source-include = ["tests/**", "scripts/**", "IMPLEMENTATION_PLAN.md"]
