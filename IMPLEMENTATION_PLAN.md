@@ -55,3 +55,12 @@ accepted state. Adapters are optional; avoid circular core imports. Python 3.14+
 remains the project floor. Use immutable source profiles until independent
 compatible releases are selected. Public source is authorized; package/weight
 publication and deployment require a separately selected concrete operation.
+
+### TFORM-02 implementation evidence
+
+Named immutable Hero/Hero Coding recipes, seeded initialization through
+Thoughtformula, passive local artifact resolution and fresh-parent specialization
+are implemented. Sidecars bind complete native checkpoint bytes, tokenizer,
+recipe, corpus and parent identities. Tests cover independent loaded objects,
+parent immutability, tampered references, mismatched lineage and exclusive output.
+These are experimental model definitions; usefulness requires measured training.

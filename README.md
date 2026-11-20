@@ -34,3 +34,20 @@ not language quality or agent capability.
 
 [Full implementation plan](https://github.com/wispsy/wispsy/blob/main/docs/cohesion-block-b/IMPLEMENTATION_PLAN.md)
 and [Project](https://github.com/orgs/wispsy/projects/28) track the complete family.
+
+## Hero recipes and local artifacts
+
+The optional Thoughtformula profile provides `thoughtform.recipes.HERO` and
+`HERO_CODING`: small experimental general-language and coding model identities.
+Recipes describe architecture; Thoughtformula owns initialization, training,
+optimizer state and checkpoints. A model identity remains separate from a Being.
+
+`artifacts.publish_artifact` writes a new passive JSON sidecar beside a selected
+native `.tft` checkpoint. `load_artifact` checks complete checkpoint and tokenizer
+hashes, bounded bytes, architecture, corpus identity and parent lineage before
+returning a model and synchronous inference adapter. References are local single
+filenames; importing Thoughtform performs no reads, training or downloads.
+`specialize` loads fresh parent weights, preserves its tokenizer/architecture and
+resets Adam for a separately identified child. Exact numerical resume uses the
+Thoughtformula checkpoint directly and preserves Adam instead. No weights are
+distributed by this package. Hypnosis owns job policy and evaluation.
