@@ -17,7 +17,7 @@ requires = ["uv_build>=0.13.6,<0.14.0"]
 build-backend = "uv_build"
 
 [project.optional-dependencies]
-thoughtformula = ["thoughtformula @ git+https://github.com/wispsy/thoughtformula.git@d61dca801b4adb3addf8f72282d87281ca091f19"]
+thoughtformula = ["thoughtformula @ git+https://github.com/wispsy/thoughtformula.git@5ce72f850772c2467f0a0909dfd5c81874065684"]
 
 [project.urls]
 Source = "https://github.com/wispsy/thoughtform"
