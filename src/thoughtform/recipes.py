@@ -52,6 +52,18 @@ class ModelRecipe:
 
 HERO = ModelRecipe('hero', 'general-knowledge')
 HERO_CODING = ModelRecipe('hero-coding', 'coding', parent_model_id='hero')
+HERO_BALANCED = ModelRecipe('hero', 'general-knowledge', version='balanced-v2', width=64, hidden=128)
+HERO_CODING_BALANCED = ModelRecipe('hero-coding', 'coding', parent_model_id='hero',
+                                  version='balanced-v2', width=64, hidden=128)
+
+
+def recipe_for(model_id, profile='pilot-v1'):
+    """Select one explicit built-in recipe; older identities remain unchanged."""
+    recipes={('hero','pilot-v1'):HERO, ('hero-coding','pilot-v1'):HERO_CODING,
+             ('hero','balanced-v2'):HERO_BALANCED, ('hero-coding','balanced-v2'):HERO_CODING_BALANCED}
+    try: return recipes[(model_id,profile)]
+    except (KeyError,TypeError): raise ValueError('Unknown named model recipe/profile') from None
+
 
 
 def initialize(recipe, tokenizer, *, seed=1):
