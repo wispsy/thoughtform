@@ -50,3 +50,14 @@ class ArtifactTests(unittest.TestCase):
                 with self.assertRaises(ValueError): load_artifact(path)
             path.write_text(json.dumps(receipt));(root/'model.tft').write_bytes(b'tampered')
             with self.assertRaises(ValueError): load_artifact(path)
+
+    def test_balanced_recipes_are_distinct_and_preserve_parent_shape(self):
+        from thoughtform.recipes import HERO,HERO_CODING,recipe_for
+        self.assertIs(recipe_for('hero'),HERO)
+        self.assertIs(recipe_for('hero-coding'),HERO_CODING)
+        hero=recipe_for('hero','balanced-v2');coding=recipe_for('hero-coding','balanced-v2')
+        self.assertEqual(hero.width,64)
+        self.assertNotEqual(hero.sha256,HERO.sha256)
+        self.assertEqual(hero.configuration(256),coding.configuration(256))
+        self.assertEqual(coding.parent_model_id,hero.model_id)
+        with self.assertRaises(ValueError): recipe_for('hero','download-a-model')

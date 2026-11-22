@@ -51,3 +51,8 @@ filenames; importing Thoughtform performs no reads, training or downloads.
 resets Adam for a separately identified child. Exact numerical resume uses the
 Thoughtformula checkpoint directly and preserves Adam instead. No weights are
 distributed by this package. Hypnosis owns job policy and evaluation.
+
+`recipes.recipe_for(model_id, profile)` selects explicit `pilot-v1` or
+`balanced-v2` recipes. Balanced Hero/Hero Coding use width 64, two layers, two
+experts and hidden width 128; actual parameter count depends on the frozen
+vocabulary. Existing pilot constants and artifact identities are unchanged.

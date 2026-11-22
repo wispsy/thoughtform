@@ -64,3 +64,8 @@ are implemented. Sidecars bind complete native checkpoint bytes, tokenizer,
 recipe, corpus and parent identities. Tests cover independent loaded objects,
 parent immutability, tampered references, mismatched lineage and exclusive output.
 These are experimental model definitions; usefulness requires measured training.
+
+TFORM-03: named balanced-v2 recipes use a larger width/hidden layer while keeping
+pilot-v1 identities stable. Hero Coding shares its selected parent's shape and
+tokenizer. New model families start separately; numerical resume and training
+remain in Thoughtformula, and experiment/data policy remains in Hypnosis.
