@@ -1,8 +1,10 @@
 [project]
 name = "thoughtform"
-version = "0.1.0"
+version = "0.1.0a1"
 description = "Individual model definitions and model-neutral agency."
 readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE.md"]
 authors = [
     { name = "ellainng", email = "299958882+ellainng@users.noreply.github.com" }
 ]
@@ -17,7 +19,7 @@ requires = ["uv_build>=0.13.6,<0.14.0"]
 build-backend = "uv_build"
 
 [project.optional-dependencies]
-thoughtformula = ["thoughtformula @ git+https://github.com/wispsy/thoughtformula.git@5ce72f850772c2467f0a0909dfd5c81874065684"]
+thoughtformula = ["thoughtformula==0.3.1"]
 
 [project.urls]
 Source = "https://github.com/wispsy/thoughtform"
