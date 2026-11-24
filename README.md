@@ -1,5 +1,10 @@
 # Thoughtform
 
+Initial PyPI preview: **0.1.0a1**. The selected optional adapter uses
+published `thoughtformula==0.3.1`. No model weights or datasets are included.
+[Wispsy Releases](https://github.com/orgs/wispsy/projects/31) distinguishes
+published artifacts from current main development.
+
 Individual model definitions and model-neutral agency. Python 3.14+.
 
 A `ModelDefinition` names an individual model and its generation policy. A
